@@ -1,0 +1,14 @@
+.header nav a{
+    text-decoration: none;
+   color:rebeccapurple;
+
+}
+.navHover:hover{
+background-color:rebeccapurple;
+padding: 10px 15px;
+border-radius: 5px;
+color:whitesmoke;
+}
+.signin{
+    color: rebeccapurple;
+}

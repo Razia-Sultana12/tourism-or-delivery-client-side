@@ -1,23 +1,46 @@
-import logo from './logo.svg';
+
 import './App.css';
+
+import AuthProvider from './context/AuthProvider';
+
+import Home from './components/Home/Home';
+import AddDestination from './components/AddDestination/AddDestination';
+import { BrowserRouter as Router,Switch,Route } from 'react-router-dom';
+import Login from './components/Login/Login';
+import About from './components/About/About';
+
+
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <AuthProvider>
+    
+        <Router>
+        <Switch>
+          <Route exact path="/" >
+            <Home></Home>
+          </Route>
+          <Route path="/home">
+            <Home></Home>
+          </Route>
+          <Route path="/aboutUs">
+            <About></About>
+          </Route>
+          <Route path="/addDestination">
+            <AddDestination></AddDestination>
+          </Route>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+
+        </Switch>
+        </Router> 
+        
+      </AuthProvider>
+      
+      
+    
     </div>
   );
 }
