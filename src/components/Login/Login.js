@@ -1,6 +1,7 @@
 
 import { getAuth, createUserWithEmailAndPassword,signInWithEmailAndPassword ,sendEmailVerification, sendPasswordResetEmail,updateProfile} from "firebase/auth";
 import { useState } from 'react';
+import { useHistory, useLocation } from "react-router";
 import initializationAuthentication from "../../Firebase/firebase.init";
 import useAuth from "../../hooks/useAuth";
 
@@ -9,6 +10,10 @@ import useAuth from "../../hooks/useAuth";
 initializationAuthentication();
 
 const Login = ()=> {
+  const location = useLocation()
+    const history = useHistory();
+    const redirect_uri= location.state?.from || '/home'
+
   const [name,setName] =useState('');
   const [email,setEmail]=useState('');
   const [password,setPassword]=useState('');
@@ -49,6 +54,7 @@ const processLogin =(email,password)=>{
   .then(result=>{
     const user= result.user;
     console.log(user);
+    history.push(redirect_uri);
     setError('');
   })
   .catch(error=>{

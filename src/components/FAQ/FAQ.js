@@ -1,39 +1,14 @@
 import React from 'react';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {  faEnvelopeSquare, faMapMarkerAlt, faPhoneAlt} from '@fortawesome/free-solid-svg-icons'
+import NewsShelter from '../NewsShelter/NewsShelter';
+import TopDestinations from '../TopDestinations/TopDestinations';
 
-const About = () => {
-    const email = <FontAwesomeIcon icon={faEnvelopeSquare} />
-    const map = <FontAwesomeIcon icon={faMapMarkerAlt} />
-    const phone = <FontAwesomeIcon icon={faPhoneAlt} />
-    
+const FAQ = () => {
     return (
-        
         <div>
             <Header></Header>
-            <h2 className="m-5 text-primary">About Us</h2>
-            <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-            <div className="col">
-                    <h3 className="text-secondary">Our Services</h3>
-                    <p>We provide you the best service of the town!Its a renowed company every year we provide 500+ tours world wide.People enjoy with us.Journey with us absolutely safe & secure.Your happiness our pleasure!</p>
-                </div>
-                <div className="col">
-                    <h3 className="text-secondary">Our Offers</h3>
-                    <p>Every year December to January we provide more then 100+ offers.And this is the best time for vacation.Spent your joyful moment by travelling the world.Our offers is a way to show our love for our customers.
-                    </p>
-                </div> 
-                <div className="col">
-                    <h3 className="text-secondary">Contact Us</h3>
-                    <p>{map} Address:#2 tower,HongKong Street.</p>
-                    <p>{phone} Phone: 000111222</p>
-                    <p>{email} Email: tourhour@gmail.com</p>
-                    
-                </div>  
-                </div>
-                
-               <div className="row m-5">
+            <div className="row m-5">
                    <h2 className="text-primary m-3">Freaquently Asked Questions</h2>
                 <div className="col-12 col-md-7">   
                <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -102,33 +77,12 @@ const About = () => {
 </div>
 <div className="col-12 col-md-5 mx-auto">
 <img src="https://img.freepik.com/free-vector/faqs-concept-illustration_114360-5185.jpg?size=338&ext=jpg" alt="" /></div>
-<div>
-                    <h2 className="text-primary m-3">24/7 Customer Support</h2>
-                    <p>Our team of experienced tour specialists have travelled to hundreds of countries around the globe and have decades of first-hand travel experience to share. Contact us now to have all of your tour-related questions answered!</p>
-                    <button className="btn btn-lg bg-primary text-light">Contact Us</button>
-               </div>
-               </div>
-               <div className="row bg-dark p-5 text-light">
-                   <div className="col-12 col-md-7">
-                   <h3>Sign up for Our Newsletter</h3>
-<p>Save up to 50% on tours! Get exclusive access to members only deals by email.</p>
-
-                   </div>
-                   <div className="col-12 col-md-5">
-                   <div class="input-group mb-3">
-  <input type="text" className="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-  <button class="btn btn-outline-secondary btn-primary text-light" type="button" id="button-addon2">Subscribe</button>
-</div>
-                       <p>By submitting this form, I agree to the TourRadar <span className="text-primary">
-                    T&Cs</span> and <span className="text-primary">Privacy policy</span>.</p>
-
-                   </div>
-               </div>
-
-            <Footer></Footer>
+        </div>
+        <TopDestinations></TopDestinations><br />
+        <NewsShelter></NewsShelter>
+        <Footer></Footer>
         </div>
     );
 };
 
-export default About;
- 
+export default FAQ;
