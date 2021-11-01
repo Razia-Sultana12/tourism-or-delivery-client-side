@@ -114,6 +114,7 @@ const handleResetPassword=() =>{
     <label className="form-check-label" htmlFor="exampleCheck1">Already Registered?</label>
   </div>
   <button type="submit" className="btn btn-primary ms-5 px-3">{isLogin? 'Login': 'Register'}</button>
+  
   <button type="button" onClick={handleResetPassword} class="btn btn-secondary ms-3 ">Reset Password</button>
 
  </form>
